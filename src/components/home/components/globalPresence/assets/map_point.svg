@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.978" height="30.522" viewBox="0 0 20.978 30.522">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.103" y1="0.598" x2="1.028" y2="0.342" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#005a8a"/>
+      <stop offset="0.047" stop-color="#006190"/>
+      <stop offset="0.206" stop-color="#0075a2"/>
+      <stop offset="0.389" stop-color="#0083af"/>
+      <stop offset="0.613" stop-color="#008bb6"/>
+      <stop offset="1" stop-color="#008eb9"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#008eb9"/>
+      <stop offset="0.264" stop-color="#0086b1"/>
+      <stop offset="0.673" stop-color="#00709e"/>
+      <stop offset="1" stop-color="#005a8a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#008eb9"/>
+      <stop offset="0.259" stop-color="#0089b4"/>
+      <stop offset="0.567" stop-color="#007aa7"/>
+      <stop offset="0.899" stop-color="#006291"/>
+      <stop offset="1" stop-color="#005a8a"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_97" data-name="Group 97" transform="translate(0 0)">
+    <path id="Path_127" data-name="Path 127" d="M752.968,387.256c-.092,0-.185,0-.279,0s-.186,0-.279,0c-7.214.194-11.895,8.147-8.957,15.126l8.507,14.956a1.586,1.586,0,0,0,2.184,0l8.507-14.956A11.1,11.1,0,0,0,752.968,387.256Zm-1.281,15.773a5.394,5.394,0,1,1,5.087-5.385A5.243,5.243,0,0,1,751.686,403.029Z" transform="translate(-742.563 -387.252)" fill="url(#linear-gradient)"/>
+    <path id="Path_128" data-name="Path 128" d="M754.263,387.256c-.092,0-.912,0-1.005,0s-.186,0-.279,0c-.244.007-.486.023-.724.046,6.8.685,11.071,8.337,8.233,15.08l-7.968,14.01a.943.943,0,0,0,0,.928l.009.018a1.586,1.586,0,0,0,2.184,0l8.507-14.956C766.158,395.4,761.477,387.45,754.263,387.256Z" transform="translate(-743.132 -387.252)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_129" data-name="Path 129" d="M751.938,403.341a4.871,4.871,0,0,0,.957-.1,5.453,5.453,0,0,1,0-10.58,4.8,4.8,0,0,0-.957-.1,5.394,5.394,0,0,0,0,10.771Z" transform="translate(-742.815 -387.564)" fill="url(#linear-gradient-3)"/>
+  </g>
+</svg>

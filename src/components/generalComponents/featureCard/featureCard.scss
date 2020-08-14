@@ -1,0 +1,185 @@
+@import "styles/presets.scss";
+
+$transition: 250ms ease-in-out;
+
+.feature-card-wrapper {
+  display: flex;
+  flex: 1;
+  height: 650px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  cursor: crosshair;
+
+  .feature-card-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    // transition: $transition;
+    box-shadow: rgba(0, 0, 0, 0.7) 4px 5px 8px;
+  }
+
+  .image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    transition: 300ms ease-in-out;
+    transition-delay: 50ms;
+  }
+
+  .overlay-color-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: $transition;
+    transition-delay: 50ms;
+  }
+
+  .text-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 20px;
+    transition: $transition;
+    transform: translateY(50%);
+  }
+
+  .header-container {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+  }
+
+  .header-text {
+    color: color(font1);
+    font-size: fontSize(jumbo);
+    font-family: fontFamily(secondary);
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-shadow: rgba(0, 0, 0, 1) 4px 6px 5px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+    text-align: right;
+  }
+
+  .body-container {
+    display: flex;
+    flex: 1;
+  }
+
+  .body-text {
+    font-family: fontFamily(primary);
+    color: color(font1);
+    font-size: fontSize(body);
+    font-weight: 300;
+    text-align: right;
+    text-shadow: rgb(0, 0, 0) 2px 3px 2px;
+  }
+
+  .list-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition-timing-function: ease-in-out;
+    //transition-delay set here to prevent the text disappearing before the text-container translates down.
+    transition-delay: 150ms;
+  }
+
+  .list-item {
+    list-style: none;
+    color: color(font1);
+    font-size: fontSize(body);
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 1px;
+  }
+
+  .list-item-tick {
+    height: 12px;
+    width: 12px;
+    opacity: 0.8;
+    margin-left: 15px;
+  }
+
+  &.align-top-left {
+    .text-container {
+      align-items: flex-start;
+      justify-content: flex-start;
+      transform: translateY(0%);
+    }
+    .header-container {
+      align-items: flex-start;
+      flex: 0;
+    }
+
+    .body-container {
+      flex: 0;
+      opacity: 0;
+      transition: opacity 300ms linear;
+    }
+    .header-text {
+      text-align: left;
+    }
+    .body-text {
+      text-align: left;
+    }
+
+    &:hover {
+      .text-container {
+        transform: translateY(25%);
+      }
+      .body-container {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:hover {
+    // .feature-card-container {
+    //   box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 3px;
+    // }
+
+    .image-background {
+      filter: blur(3px);
+      transform: scale(1.05);
+    }
+
+    .overlay-color-container {
+      opacity: 0.4;
+    }
+
+    .text-container {
+      transform: translateY(0%);
+    }
+
+    .list-item-container {
+      opacity: 1;
+      //duration set here to make the list items disappear immediately on hiding.
+      transition-duration: 150ms;
+      transform: translateY(0);
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          transition-delay: 120ms * $i;
+        }
+      }
+    }
+  }
+}

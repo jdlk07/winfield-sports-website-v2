@@ -1,0 +1,70 @@
+@import "styles/presets.scss";
+
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(141deg, #fff 14%, #09478394 70%);
+  box-shadow: 0 5px 12px #000000c7;
+
+  .navbar-container {
+    width: $desktopContentWidth;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-container {
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    height: 33px;
+    margin: 0;
+  }
+
+  .right-container {
+    display: flex;
+  }
+
+  .link-container {
+    padding: 0 10px;
+
+    .link-button {
+      text-decoration: none;
+      color: color(font1);
+      font-size: 1rem;
+      opacity: 1;
+
+      .link-line {
+        position: relative;
+        height: 1px;
+        width: 0;
+        margin-top: 1px;
+        border-radius: 15px;
+        background-color: color(font1);
+        transition: 250ms;
+      }
+
+      &:hover {
+        .link-line {
+          width: 100%;
+        }
+      }
+
+      &.link-active {
+        .link-line {
+          width: 100%;
+          background-color: color(winfieldRed);
+        }
+      }
+    }
+  }
+}

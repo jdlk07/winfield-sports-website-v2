@@ -1,0 +1,19 @@
+.home-mission-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+
+  .mission-body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+
+    .body-text {
+      white-space: pre-line;
+    }
+  }
+}

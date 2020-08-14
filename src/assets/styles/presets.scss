@@ -1,0 +1,73 @@
+// @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,200,200i,300,300i,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,600&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600&display=swap");
+
+$desktop: 768px;
+$desktopContentWidth: 1366px;
+
+$primaryFont: "Roboto Condensed", sans-serif;
+$secondaryFont: "Oswald", sans-serif;
+
+$colors: (
+  font1: #ffffff,
+  font2: #ffffff96,
+  winfieldBlue: #2d96ff,
+  winfieldRed: #dd1831,
+  bg1: #15171a,
+  bg2: #132531,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$fontFamilies: (
+  primary: $primaryFont,
+  secondary: $secondaryFont,
+);
+
+@function fontFamily($font-family) {
+  @return map-get($fontFamilies, $font-family);
+}
+
+$fontSizes: (
+  jumbo: 3.6rem,
+  header: 2.4rem,
+  subheader: 2.2rem,
+  body: 1.4rem,
+);
+
+@function fontSize($font-size) {
+  @return map-get($fontSizes, $font-size);
+}
+
+@mixin mobile {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin placeHolderText {
+  &::placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}

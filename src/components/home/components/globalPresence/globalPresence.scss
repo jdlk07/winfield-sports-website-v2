@@ -1,0 +1,117 @@
+.global-presence-wrapper {
+  padding: 80px 0;
+
+  .global-presence-body-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-container {
+    position: relative;
+    height: 480px;
+    width: 100%;
+
+    .map-base {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .map-paths {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transition: 250ms ease-in-out 1000ms;
+      z-index: 1;
+    }
+
+    .map-point {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      transition: 250ms ease-in-out;
+      z-index: 2;
+
+      //nth-of-type starts at 2 because the first-of-type is the map-base
+      &.point-0 {
+        top: 44%;
+        left: 59%;
+        transition-delay: 200ms;
+      }
+      &.point-1 {
+        top: 47%;
+        left: 64%;
+        transition-delay: 300ms;
+      }
+      &.point-2 {
+        top: 52.4%;
+        left: 65.1%;
+        transition-delay: 400ms;
+      }
+      &.point-3 {
+        top: 53%;
+        left: 70.3%;
+        transition-delay: 500ms;
+      }
+    }
+    .map-label {
+      position: absolute;
+      font-size: fontSize(header);
+      color: color(font1);
+      font-weight: 400;
+      text-transform: uppercase;
+      text-shadow: rgba(0, 0, 0, 1) 4px 3px 3px;
+      transition: 250ms ease-in-out;
+      z-index: 3;
+
+      &.label-0 {
+        left: 47%;
+        top: 35%;
+        transition-delay: 450ms + 100ms;
+      }
+      &.label-1 {
+        left: 65%;
+        top: 31%;
+        transition-delay: 450ms + 200ms;
+      }
+      &.label-2 {
+        left: 48%;
+        top: 50%;
+        transition-delay: 450ms + 300ms;
+      }
+      &.label-3 {
+        left: 74%;
+        top: 48%;
+        transition-delay: 450ms + 400ms;
+      }
+    }
+
+    &.hidden {
+      .map-paths {
+        opacity: 0;
+        transform: scaleX(0.95);
+        transition-duration: 0ms;
+        transition-delay: 0ms;
+      }
+
+      .map-point {
+        transform: translateY(-20px);
+        // transform-origin: bottom;
+        opacity: 0;
+        transition-duration: 0ms;
+        transition-delay: 0ms;
+      }
+
+      .map-label {
+        opacity: 0;
+        transform: translateY(5px);
+        transition-duration: 0ms;
+        transition-delay: 0ms;
+      }
+    }
+  }
+}
