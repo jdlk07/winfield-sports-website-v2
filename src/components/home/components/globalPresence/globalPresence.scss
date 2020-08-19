@@ -1,5 +1,11 @@
 .global-presence-wrapper {
-  padding: 80px 0;
+  position: relative;
+  padding: $desktopSectionPadding;
+
+  .parallax-background-image {
+    width: 90%;
+    transform: rotate(20deg) translate(-7%, -18%);
+  }
 
   .global-presence-body-container {
     display: flex;

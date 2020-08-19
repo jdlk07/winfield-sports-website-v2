@@ -1,6 +1,6 @@
 @import "styles/presets.scss";
 
-$transition: 250ms ease-in-out;
+$transition: 250ms linear;
 
 .feature-card-wrapper {
   display: flex;
@@ -9,6 +9,7 @@ $transition: 250ms ease-in-out;
   padding: 0 6px;
   box-sizing: border-box;
   cursor: crosshair;
+  max-width: calc(100% / 3);
 
   .feature-card-container {
     position: relative;
@@ -33,6 +34,8 @@ $transition: 250ms ease-in-out;
     box-sizing: border-box;
     transition: 300ms ease-in-out;
     transition-delay: 50ms;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .overlay-color-container {
@@ -70,7 +73,7 @@ $transition: 250ms ease-in-out;
     font-size: fontSize(jumbo);
     font-family: fontFamily(secondary);
     font-weight: 400;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     text-shadow: rgba(0, 0, 0, 1) 4px 6px 5px;
     margin: 10px 0;
     text-transform: uppercase;
@@ -115,7 +118,7 @@ $transition: 250ms ease-in-out;
   .list-item-tick {
     height: 12px;
     width: 12px;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-left: 15px;
   }
 
@@ -158,7 +161,7 @@ $transition: 250ms ease-in-out;
     // }
 
     .image-background {
-      filter: blur(3px);
+      filter: blur(1px);
       transform: scale(1.05);
     }
 

@@ -1,0 +1,23 @@
+.products-wrapper {
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: $desktopSectionPadding;
+  @extend %parallax-background-adjacent;
+  // z-index: 2;
+
+  .products-container {
+    position: relative;
+    display: flex;
+    max-width: $desktopContentWidth;
+    z-index: 2;
+  }
+
+  .parallax-background-image {
+    transform: scale(1.2) rotate(189deg) translate(-24%, 29%);
+  }
+
+  @import "./product/product.scss";
+}

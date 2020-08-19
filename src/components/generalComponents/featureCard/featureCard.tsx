@@ -5,7 +5,7 @@ import "./featureCard.scss"
 const BodyList = ({ data }: { data: string[] }) => (
   <ul className="list-container">
     {data.map(listItem => (
-      <div className="list-item-container">
+      <div key={listItem} className="list-item-container">
         <li className="list-item">{listItem}</li>
         <img src={tickIcon} className="list-item-tick" alt="Tick Icon" />
       </div>

@@ -1,7 +1,9 @@
+import { BackgroundParallax } from "components/generalComponents/backgroundParallax/backgroundParallax"
 import {
   SectionText,
   SectionWrapper,
 } from "components/generalComponents/layout/sectionWrapper/sectionWrapper"
+import backgroundPolygon from "images/background/polygon.png"
 import React from "react"
 
 const headerData: SectionText = [
@@ -39,10 +41,13 @@ As a specialized Sports branding and Signage company, Winfield with strategic pa
 
 export const Mission = () => (
   <div className="home-mission-wrapper">
-    <SectionWrapper header={headerData} subheader={subheaderData}>
-      <div className="mission-body-container">
-        <p className="body-text">{bodyText}</p>
-      </div>
-    </SectionWrapper>
+    <BackgroundParallax backgroundImage={backgroundPolygon} />
+    <div className="home-mission-container">
+      <SectionWrapper header={headerData} subheader={subheaderData}>
+        <div className="mission-body-container">
+          <p className="body-text">{bodyText}</p>
+        </div>
+      </SectionWrapper>
+    </div>
   </div>
 )

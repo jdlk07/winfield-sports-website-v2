@@ -1,0 +1,31 @@
+.three-d-mission-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $desktopSectionPadding;
+
+  .parallax-background-image {
+    // height: 120%;
+    width: 90%;
+    transform: translate(-10%, -13%);
+  }
+
+  .three-d-mission-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .mission-body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+
+    .body-text {
+      white-space: pre-line;
+    }
+  }
+}

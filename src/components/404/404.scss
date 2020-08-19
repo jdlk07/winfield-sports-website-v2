@@ -1,0 +1,39 @@
+@import "styles/presets.scss";
+
+.not-found-wrapper {
+  display: flex;
+  flex: 1;
+
+  .not-found-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $desktopContentWidth;
+    height: 100vh;
+  }
+
+  .header-text {
+    font-size: fontSize(jumbo);
+  }
+
+  .subheader-text {
+    font-size: fontSize(header);
+    font-weight: 400;
+    margin: 10px 0 20px 0;
+  }
+
+  .body-text {
+    color: color(font2);
+    font-size: fontSize(body);
+  }
+
+  .shadow {
+    height: 30px;
+    width: 220px;
+    background-color: rgba(255, 250, 250, 0.1);
+    border-radius: 50%;
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,141 @@
+.client-logos-wrapper {
+  padding: $desktopSectionPadding;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .client-logos-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: $desktopContentWidth;
+  }
+
+  .header-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    // background-color: plum;
+
+    .header-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      // background-color: steelblue;
+    }
+
+    .header-text {
+      font-family: fontFamily(secondary);
+      font-size: fontSize(body);
+      color: color(font1);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      text-shadow: rgb(0, 0, 0) 3px 3px 2px;
+      margin: 0;
+    }
+  }
+
+  // .fancy-line-container {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   // background-color: teal;
+
+  // }
+  .header-background {
+    height: 100%;
+    width: 450px;
+    background-color: color(bg1);
+    // transform: translate(-50%, 0);
+    // z-index: 2;
+  }
+
+  .fancy-line {
+    display: flex;
+    flex: 1;
+    // width: 50%;
+    height: 3px;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 5%,
+      (#{color(winfieldBlue)}90),
+      color(winfieldRed) 85%
+    );
+    background-size: 300%;
+    animation: fancy-line-animation 6s ease infinite;
+
+    @include keyframes(fancy-line-animation) {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    &.fancy-line-2 {
+      transform: rotate(180deg);
+    }
+  }
+
+  .body-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    // background-color: teal;
+  }
+
+  .logos-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(100% / 6);
+    padding: 20px;
+  }
+
+  .client-logo {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    box-shadow: rgb(0, 0, 0) 10px 10px 8px;
+  }
+}

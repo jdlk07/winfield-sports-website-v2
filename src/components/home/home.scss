@@ -1,0 +1,14 @@
+@import "styles/presets.scss";
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @import "./components//hero/hero.scss";
+  @import "./components/mission/mission.scss";
+  @import "./components/sportsServices/sportsServices.scss";
+  @import "./components/globalPresence/globalPresence.scss";
+  @import "./components/products/products.scss";
+  @import "./components/clientLogos/clientLogos.scss";
+}

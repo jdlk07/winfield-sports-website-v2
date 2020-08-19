@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
   // width: 100%;
-  padding: 80px 0;
+  padding: $desktopSectionPadding;
+  // z-index: 2;
+  @extend %parallax-background-adjacent;
 
   .products-container {
     display: flex;

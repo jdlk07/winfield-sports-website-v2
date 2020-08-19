@@ -48,7 +48,7 @@ const rugbyCard: FeatureCardProps = {
 const cardData = [cricketCard, footballCard, rugbyCard]
 
 export const SportsServices = () => (
-  <div className="sports-services-wrapper">
+  <div className="sports-services-wrapper page-section-wrapper">
     <div className="sports-services-header-container">
       <h1 className="header-top">Let us take care of your</h1>
       <h1 className="header-bottom">Brand</h1>

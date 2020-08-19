@@ -1,0 +1,13 @@
+@import "styles/presets.scss";
+
+.three-d-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+
+  @import "./components/hero/hero.scss";
+  @import "./components/mission/mission.scss";
+  @import "./components/servicesSection/servicesSection.scss";
+  @import "./components/products/products.scss";
+}

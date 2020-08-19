@@ -1,4 +1,6 @@
+import { BackgroundParallax } from "components/generalComponents/backgroundParallax/backgroundParallax"
 import { SectionWrapper } from "components/generalComponents/layout/sectionWrapper/sectionWrapper"
+import backgroundPolygon from "images/background/polygon.png"
 import React, { useRef } from "react"
 import { useIsVisible } from "react-is-visible"
 import mapBase from "./assets/map_base.png"
@@ -30,13 +32,12 @@ const subheader = [
 
 const countires = ["Dubai", "India", "Sri Lanka", "Malaysia"]
 
-export const GlobalPresence = () => {
-  const nodeRef = useRef()
+const _GlobalPresence = () => {
+  const nodeRef = useRef<HTMLDivElement>(null)
   const isVisible = useIsVisible(nodeRef)
-  console.log(isVisible)
-  console.log("hello")
   return (
     <div ref={nodeRef} className="global-presence-wrapper">
+      <BackgroundParallax backgroundImage={backgroundPolygon} />
       <SectionWrapper header={header} subheader={subheader} alignRight>
         <div className="global-presence-body-container">
           <div className={`map-container${isVisible ? "" : " hidden"}`}>
@@ -63,3 +64,5 @@ export const GlobalPresence = () => {
     </div>
   )
 }
+
+export const GlobalPresence = React.memo(_GlobalPresence)

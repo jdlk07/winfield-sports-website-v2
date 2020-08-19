@@ -1,10 +1,11 @@
 // @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,200,200i,300,300i,400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,600&display=swap");
 // @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600&display=swap");
 
 $desktop: 768px;
 $desktopContentWidth: 1366px;
+$desktopSectionPadding: 80px 0;
 
 $primaryFont: "Roboto Condensed", sans-serif;
 $secondaryFont: "Oswald", sans-serif;
@@ -15,7 +16,7 @@ $colors: (
   winfieldBlue: #2d96ff,
   winfieldRed: #dd1831,
   bg1: #15171a,
-  bg2: #132531,
+  bg2: #121111,
 );
 
 @function color($color-name) {
@@ -32,10 +33,11 @@ $fontFamilies: (
 }
 
 $fontSizes: (
-  jumbo: 3.6rem,
-  header: 2.4rem,
-  subheader: 2.2rem,
+  jumbo: 3.4rem,
+  header: 2.3rem,
   body: 1.4rem,
+  small: 0.9rem,
+  extraSmall: 0.72rem,
 );
 
 @function fontSize($font-size) {
@@ -70,4 +72,9 @@ $fontSizes: (
   @keyframes #{$animation-name} {
     @content;
   }
+}
+
+%parallax-background-adjacent {
+  position: relative;
+  z-index: 2;
 }
