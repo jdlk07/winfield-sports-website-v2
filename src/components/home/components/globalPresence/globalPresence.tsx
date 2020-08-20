@@ -4,7 +4,7 @@ import backgroundPolygon from "images/background/polygon.png"
 import React, { useRef } from "react"
 import { useIsVisible } from "react-is-visible"
 import mapBase from "./assets/map_base.png"
-import mapPaths from "./assets/map_paths.svg"
+import mapPaths from "./assets/map_paths.png"
 import mapPoint from "./assets/map_point.svg"
 
 const header = [

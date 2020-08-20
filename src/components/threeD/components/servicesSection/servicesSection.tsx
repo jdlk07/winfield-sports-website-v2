@@ -8,38 +8,30 @@ import implementationPoster from "./assets/implementation.png"
 import productionPoster from "./assets/production.png"
 
 const designCard: FeatureCardProps = {
-  header: "DESIGN\n& RENDER",
-  body: [
-    "20+ Years of Experience",
-    "In Stadia Branding",
-    "3D Pitch Mats",
-    "3D Grass Signs",
-  ],
+  header: "3D DESIGN",
+  body: ["3D Design", "Print Output", "Sign Placement Plans"],
   image: designPoster,
   overlayColor: "rgb(175, 134, 216)",
 }
 
 const productionCard: FeatureCardProps = {
-  header: "PRODUCTION\n& SHIPPING",
+  header: "BACKEND PRODUCTION",
   body: [
-    "3D Turf Mats",
-    "3D Grass Signs",
-    "Perimeter Branding",
-    "Post Branding",
-    "Presentations",
+    "Material Production",
+    "Implmentation Guide & Plan",
+    "EXW/FOB/CIF Logistics",
   ],
   image: productionPoster,
   overlayColor: "rgb(218, 142, 99)",
 }
 
 const implementationCard: FeatureCardProps = {
-  header: "ON-FIELD IMPLEMENTATION",
+  header: "TURN-KEY SOLUTIONS",
   body: [
-    "3D Grass Signs",
-    "Perimeter Branding",
-    "Presentations",
-    "Post & Marker Branding",
-    "Tier Branding",
+    "Operations & Coordination",
+    "On-Field Implementation",
+    "Single Point of Contact",
+    "Post Event Evaluation & Media",
   ],
   image: implementationPoster,
   overlayColor: "rgb(179, 47, 40)",

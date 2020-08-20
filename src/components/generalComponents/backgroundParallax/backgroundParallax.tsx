@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import { animated, to, useSpring } from "react-spring"
 import "./backgroundParallax.scss"
 
-const calc = (o: number) => `translateY(${o * 0.05}px)`
+const calc = (o: number) => `translateY(${o * 0.08}px)`
 
 interface IsProps {
   backgroundImage: string

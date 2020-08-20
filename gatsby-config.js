@@ -21,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Winfield Sports`,
-        short_name: `Winfield Sports`,
+        name: `winfield-sports`,
+        short_name: `WS`,
         start_url: `/`,
         background_color: `#15171a`,
         theme_color: `#15171a`,
@@ -47,6 +47,14 @@ module.exports = {
       resolve: `gatsby-plugin-transition-link`,
       options: {
         injectPageProps: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.winfieldsports.net",
+        //Bototm is set to allow uploading the file to AWS. see https://github.com/jariz/gatsby-plugin-s3/issues/38
+        acl: null,
       },
     },
   ],
