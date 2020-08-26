@@ -1,0 +1,96 @@
+.timeline-wrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: $desktopContentWidth;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  .timeline-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    max-width: 65%;
+  }
+
+  .timeline-item-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    @extend%remove-button-styles;
+
+    &:hover {
+      .timeline-header-text {
+        opacity: 0.8;
+      }
+    }
+    &.active {
+      .timeline-header-text {
+        opacity: 1;
+      }
+    }
+  }
+
+  .header-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-header-text {
+    font-family: fontFamily(secondary);
+    font-size: fontSize(small);
+    font-weight: 400;
+    opacity: 0.2;
+    transition: 350ms;
+  }
+
+  .line-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    // padding: 30px 0;
+  }
+
+  $lineColor: #2b2d30;
+
+  .line {
+    height: 4px;
+    width: 100%;
+    background-color: $lineColor;
+  }
+
+  .dot {
+    $dotSize: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: $dotSize;
+    width: $dotSize;
+    border-radius: 50%;
+    background-color: $lineColor;
+    transform: translate(-50%, -50%);
+  }
+
+  .active-line-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // background-color: teal;
+    transition: 250ms;
+
+    .active-dot {
+      background-color: color(winfieldRed);
+    }
+  }
+}

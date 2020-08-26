@@ -32,7 +32,7 @@ $transition: 250ms linear;
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    transition: 300ms ease-in-out;
+    transition: 600ms ease-in-out;
     transition-delay: 50ms;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -46,7 +46,7 @@ $transition: 250ms linear;
     bottom: 0;
     z-index: 0;
     opacity: 0;
-    transition: $transition;
+    transition: 500ms ease-in-out;
     transition-delay: 50ms;
   }
 
@@ -101,7 +101,7 @@ $transition: 250ms linear;
     justify-content: flex-end;
     margin-bottom: 16px;
     opacity: 0;
-    transform: translateY(5px);
+    transform: translateY(10px);
     transition-timing-function: ease-in-out;
     //transition-delay set here to prevent the text disappearing before the text-container translates down.
     transition-delay: 150ms;
@@ -176,11 +176,11 @@ $transition: 250ms linear;
     .list-item-container {
       opacity: 1;
       //duration set here to make the list items disappear immediately on hiding.
-      transition-duration: 150ms;
+      transition-duration: 250ms;
       transform: translateY(0);
       @for $i from 1 through 10 {
         &:nth-of-type(#{$i}) {
-          transition-delay: 120ms * $i;
+          transition-delay: 120ms * $i + 50ms;
         }
       }
     }

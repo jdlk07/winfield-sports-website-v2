@@ -25,10 +25,10 @@ export const Features = ({ data }: IsProps) => (
               className="feature-image"
             />
           </div>
-          <div className="seperator-line" />
+          {/* <div className="seperator-line" />
           <div className="feature-body-text-container">
             <p className="feature-body-text">{body}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     ))}

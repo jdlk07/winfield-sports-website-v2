@@ -10,9 +10,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 interface IsProps {
-  description: string
-  lang: string
-  meta: []
+  description?: string
+  lang?: string
+  meta?: []
   title: string
 }
 

@@ -15,7 +15,8 @@ const transitionEnter = {
 
 const links = [
   { name: "HOME", to: "/" },
-  { name: "3D ON-FIELD", to: "/3D" },
+  { name: "3D VR", to: "/vr" },
+  { name: "3D ON-FIELD", to: "/3d" },
 ]
 
 const _Navbar = () => {
@@ -38,6 +39,8 @@ const _Navbar = () => {
           {links.map(({ name, to }) => (
             <div key={name} className="link-container">
               <TransitionLink
+                //Added partiallyActive because when reloading the page the browser appends a trailing slash which breaks the activeClassName prop
+                partiallyActive={to !== "/"}
                 className="link-button"
                 activeClassName="link-active"
                 to={to}

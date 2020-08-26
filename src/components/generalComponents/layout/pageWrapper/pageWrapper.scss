@@ -19,17 +19,14 @@ body {
   h2,
   h3 {
     font-family: fontFamily(primary);
+    font-size: fontSize(body);
     color: color(font1);
     margin: 0;
     letter-spacing: 0.03rem;
     white-space: pre-wrap;
   }
   .body-text {
-    font-size: fontSize(body);
-    font-weight: 300;
-    color: color(font1);
-    line-height: 2.2rem;
-    letter-spacing: 0.4px;
+    @extend %body-text;
   }
 }
 

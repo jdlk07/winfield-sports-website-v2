@@ -10,7 +10,8 @@
 
   .sports-services-container {
     display: flex;
-    width: $desktopContentWidth;
+    width: 100%;
+    max-width: $desktopContentWidth;
   }
 
   .sports-services-header-container {

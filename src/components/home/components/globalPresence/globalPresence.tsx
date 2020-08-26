@@ -8,26 +8,30 @@ import mapPaths from "./assets/map_paths.png"
 import mapPoint from "./assets/map_point.svg"
 
 const header = [
-  { text: "Strategic" },
-  { text: "Global", alternate: true },
-  { text: "Positioning" },
+  [{ text: "Strategic" }],
+  [{ text: "Global", alternate: true }],
+  [{ text: "Positioning" }],
 ]
 
 const subheader = [
-  {
-    text: "easy",
-  },
-  {
-    text: "access",
-    alternate: true,
-  },
-  {
-    text: "&",
-  },
-  {
-    text: "opeartion",
-    alternate: true,
-  },
+  [
+    {
+      text: "easy",
+    },
+    {
+      text: "access",
+      alternate: true,
+    },
+    {
+      text: "&",
+    },
+  ],
+  [
+    {
+      text: "opeartion",
+      alternate: true,
+    },
+  ],
 ]
 
 const countires = ["Dubai", "India", "Sri Lanka", "Malaysia"]

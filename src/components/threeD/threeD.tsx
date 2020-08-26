@@ -1,5 +1,4 @@
 import { PageWrapper } from "components/generalComponents/layout/pageWrapper/pageWrapper"
-import SEO from "components/seo"
 import React from "react"
 import { Hero } from "./components/hero/hero"
 import { Mission } from "./components/mission/mission"
@@ -13,13 +12,13 @@ interface IsProps {
 
 const _ThreeD = ({ onLoad }: IsProps) => {
   return (
-    <PageWrapper>
+    <PageWrapper title={"3D ON-Field"}>
       <div className="three-d-wrapper">
-        <SEO title={"3D ON-Field"} />
         <Hero onLoad={onLoad} />
         <Mission />
         <Products />
         <ServicesSection />
+        {/* <PastProjects /> */}
       </div>
     </PageWrapper>
   )

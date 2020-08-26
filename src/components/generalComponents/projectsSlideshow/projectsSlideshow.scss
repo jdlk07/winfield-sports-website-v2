@@ -1,0 +1,31 @@
+@import "styles/presets.scss";
+
+.projects-slideshow-wrapper {
+  width: 100%;
+  padding: $desktopSectionPadding;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  .projects-slideshow-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    // background-color: teal;
+    max-width: $desktopContentWidth;
+  }
+
+  .projects-main-header-text {
+    @extend%section-header-text;
+    color: color(winfieldRed);
+    text-shadow: rgba(0, 0, 0, 1) 5px 5px 6px;
+    letter-spacing: 0.2rem;
+  }
+
+  @import "./components/timeline/timeline.scss";
+
+  @import "./components/body/body.scss";
+}

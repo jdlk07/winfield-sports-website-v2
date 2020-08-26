@@ -1,0 +1,14 @@
+@import "styles/presets.scss";
+
+.vr-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+
+  @import "./components/hero/hero.scss";
+  @import "./components/mission/mission.scss";
+  @import "./components/advantages/advantages.scss";
+  @import "./components/vrPlacement/vrPlacement.scss";
+  @import "./components/features/features.scss";
+}

@@ -1,5 +1,4 @@
 import { PageWrapper } from "components/generalComponents/layout/pageWrapper/pageWrapper"
-import SEO from "components/seo"
 import React from "react"
 import { ClientLogos } from "./components/clientLogos/clientLogos"
 import { GlobalPresence } from "./components/globalPresence/globalPresence"
@@ -15,9 +14,8 @@ interface IsProps {
 
 const _Home = ({ onLoad }: IsProps) => {
   return (
-    <PageWrapper>
+    <PageWrapper title={"Winfield Sports"}>
       <div className="home-wrapper">
-        <SEO title={"Winfield Sports"} />
         <Hero onLoad={onLoad} />
         <Mission />
         <SportsServices />

@@ -7,6 +7,8 @@ $desktop: 768px;
 $desktopContentWidth: 1366px;
 $desktopSectionPadding: 80px 0;
 
+$seperatorLineWidth: 3px;
+
 $primaryFont: "Roboto Condensed", sans-serif;
 $secondaryFont: "Oswald", sans-serif;
 
@@ -35,8 +37,8 @@ $fontFamilies: (
 $fontSizes: (
   jumbo: 3.4rem,
   header: 2.3rem,
-  body: 1.4rem,
-  small: 0.9rem,
+  body: 1.23rem,
+  small: 1rem,
   extraSmall: 0.72rem,
 );
 
@@ -74,7 +76,56 @@ $fontSizes: (
   }
 }
 
+%page-section-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $desktopSectionPadding;
+}
+
 %parallax-background-adjacent {
   position: relative;
   z-index: 2;
+}
+
+%mission-body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+
+%body-text {
+  font-size: fontSize(body);
+  font-weight: 300;
+  font-family: fontFamily(primary);
+  color: color(font1);
+  line-height: 2.2rem;
+  letter-spacing: 0.4px;
+  text-shadow: rgb(0, 0, 0) 3px 3px 2px;
+}
+
+%section-header-text {
+  font-family: fontFamily(secondary);
+  font-size: fontSize(jumbo);
+  font-weight: 800;
+  color: color(font1);
+}
+
+%section-subheader-text {
+  font-size: fontSize(header);
+  font-family: fontFamily(secondary);
+  font-weight: 400;
+  color: color(font1);
+}
+
+%remove-button-styles {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  cursor: pointer;
 }

@@ -1,0 +1,115 @@
+.vr-placement-wrapper {
+  @extend%page-section-wrapper;
+  // @extend%parallax-background-adjacent;
+  padding: 150px 0;
+
+  .parallax-background-image {
+    // height: 120%;
+    width: 80%;
+    // max-width: 100%;
+    // margin-left: -24.7vw;
+    // transform: translate(0%, -50%);
+    transform: translate(24%, -30%);
+  }
+
+  .vr-placement-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 310px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    max-width: $desktopContentWidth;
+    z-index: 2;
+  }
+
+  .header-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .header-container {
+    display: flex;
+  }
+
+  .header-text {
+    @extend%section-header-text;
+    text-transform: uppercase;
+  }
+
+  .subheader-text {
+    @extend%section-subheader-text;
+    text-align: right;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0) 2px 2px 3px;
+  }
+
+  .alternate-text {
+    color: color(winfieldRed);
+    text-shadow: rgb(0, 0, 0) 5px 5px 6px;
+  }
+
+  .seperator-line {
+    min-height: 100%;
+    width: $seperatorLineWidth;
+    background-color: color(winfieldRed);
+    margin: 0 40px;
+    border-radius: 50%;
+  }
+
+  .body-wrapper {
+    display: flex;
+    flex: 1;
+    // justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &.hidden {
+    .seperator-line {
+      transform: scaleY(0);
+    }
+    .header-container {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    .subheader-container {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+
+    .body-wrapper {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+
+  &.visible {
+    .seperator-line {
+      transform: scaleY(1);
+      transition: 350ms;
+    }
+    .header-container {
+      transform: translateX(0%);
+      opacity: 1;
+      transition: 450ms;
+      transition-delay: 350ms;
+    }
+    .subheader-container {
+      transform: translateX(0%);
+      opacity: 1;
+      transition: 450ms;
+      transition-delay: 550ms;
+    }
+    .body-wrapper {
+      transform: scale(1);
+      opacity: 1;
+      transition: 450ms ease-in-out;
+      transition-delay: 550ms;
+    }
+  }
+}

@@ -9,16 +9,36 @@
     transform: translate(-50%, -50%);
   }
 
+  $arrowSize: 25px;
+  $arrowWidth: 2.5px;
+
   .box span {
+    position: relative;
     display: block;
-    width: 25px;
-    height: 25px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
+    width: $arrowSize;
+    height: $arrowSize;
+    border-bottom: $arrowWidth solid;
+    border-right: $arrowWidth solid;
     transform: rotate(45deg);
     margin: -10px;
     animation: scrollAnimation 3s infinite;
     border-color: color(winfieldRed);
+    border-radius: 2px;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      right: -8px;
+      width: $arrowSize;
+      height: $arrowSize;
+      border-bottom: $arrowWidth + 2px solid;
+      border-right: $arrowWidth + 2px solid;
+      border-color: rgba(0, 0, 0, 0.322);
+      border-radius: 2px;
+      z-index: -1;
+    }
   }
 
   .box span:nth-child(2) {

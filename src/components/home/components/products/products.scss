@@ -10,6 +10,6 @@
 
   .products-container {
     display: flex;
-    width: $desktopContentWidth;
+    max-width: $desktopContentWidth;
   }
 }

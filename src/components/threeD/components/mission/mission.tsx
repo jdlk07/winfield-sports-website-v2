@@ -3,28 +3,36 @@ import {
   SectionText,
   SectionWrapper,
 } from "components/generalComponents/layout/sectionWrapper/sectionWrapper"
-import backgroundSwirl from "images/background/swirl.png"
+import * as backgroundSwirl from "images/background/swirl.png"
 import React from "react"
 
 const headerData: SectionText = [
-  {
-    text: "Set the",
-  },
-  {
-    text: "Stage",
-    alternate: true,
-  },
+  [
+    {
+      text: "Set the",
+    },
+  ],
+  [
+    {
+      text: "Stage",
+      alternate: true,
+    },
+  ],
 ]
 
 const subheaderData: SectionText = [
-  {
-    text: "For the",
-  },
-  {
-    //Added spaces to force a link break.
-    text: "       Future",
-    alternate: true,
-  },
+  [
+    {
+      text: "For the",
+    },
+  ],
+  [
+    {
+      //Added spaces to force a link break.
+      text: "Future",
+      alternate: true,
+    },
+  ],
 ]
 
 const bodyText = `Using our proprietary 3D – On Field Design software, we have managed to deliver unparalleled and unmatched sports advertising opportunities to many clients across many sporting events. Using our point projection software, we manage to utilize flat ad-space to resemble free standing advertising for our on-screen viewers.

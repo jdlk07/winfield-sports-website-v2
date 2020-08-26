@@ -3,6 +3,8 @@
 .not-found-wrapper {
   display: flex;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 
   .not-found-container {
     display: flex;
@@ -10,7 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: $desktopContentWidth;
+    width: 100%;
+    max-width: $desktopContentWidth;
     height: 100vh;
   }
 

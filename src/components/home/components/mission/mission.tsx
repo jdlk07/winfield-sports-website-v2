@@ -7,30 +7,40 @@ import backgroundPolygon from "images/background/polygon.png"
 import React from "react"
 
 const headerData: SectionText = [
-  {
-    text: "Total",
-  },
-  {
-    text: "Sports",
-    alternate: true,
-  },
-  {
-    text: "Signage",
-    alternate: true,
-  },
-  {
-    text: "Solutions",
-  },
+  [
+    {
+      text: "Total",
+    },
+  ],
+  [
+    {
+      text: "Sports",
+      alternate: true,
+    },
+  ],
+  [
+    {
+      text: "Signage",
+      alternate: true,
+    },
+  ],
+  [
+    {
+      text: "Solutions",
+    },
+  ],
 ]
 
 const subheaderData: SectionText = [
-  {
-    text: "Since",
-  },
-  {
-    text: "2000",
-    alternate: true,
-  },
+  [
+    {
+      text: "Since ",
+    },
+    {
+      text: "2000",
+      alternate: true,
+    },
+  ],
 ]
 
 const bodyText = `Winfield was established in 1999 in Sri Lanka as a BTL (below-the-line) company, that grew steadily and diversified horizontally in the field of Outdoor Advertising. And later became the single specialized company in Sports branding and Signage.

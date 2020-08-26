@@ -1,6 +1,6 @@
-import { ScrollAnim } from "components/generalComponents/scrollAnim/scrollAnim"
+import { HeroVideo } from "components/generalComponents/heroVideo/heroVideo"
 import React from "react"
-import heroImg from "../../assets/hero.jpg"
+import heroVideo from "./assets/hero.mp4"
 
 interface IsProps {
   onLoad: () => void
@@ -8,16 +8,6 @@ interface IsProps {
 
 export const Hero = ({ onLoad }: IsProps) => (
   <div className="hero-wrapper">
-    <div className="image-container">
-      <img
-        src={heroImg}
-        alt="Cricket Match Image"
-        className="hero-img"
-        onLoad={onLoad}
-      />
-    </div>
-    <div className="scroll-anim-container">
-      <ScrollAnim />
-    </div>
+    <HeroVideo onLoad={onLoad} video={heroVideo} />
   </div>
 )

@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, useRef } from "react"
+import { useIsVisible } from "react-is-visible"
 import "./sectionWrapper.scss"
 
 interface TextObj {
@@ -6,7 +7,9 @@ interface TextObj {
   alternate?: boolean
 }
 
-export type SectionText = TextObj[]
+type TextArray = TextObj[]
+
+export type SectionText = TextArray[]
 
 interface SectionHeaderProps {
   header: SectionText
@@ -20,27 +23,35 @@ const SectionHeader = React.memo(
       {alignRight ? <span className="section-seperator"></span> : null}
       <div className="header-container">
         <div className="header-text-container">
-          {header.map(({ text, alternate }, i) => (
-            <h1
-              key={i}
-              className={`section-header${
-                alternate ? " alternate-header" : ""
-              }`}
-            >
-              {text}
-            </h1>
+          {header.map((textArray, i) => (
+            <div key={i} className="header-subcontainer">
+              {textArray.map(({ text, alternate }, i) => (
+                <h1
+                  key={i}
+                  className={`section-header${
+                    alternate ? " alternate-text" : ""
+                  }`}
+                >
+                  {text}
+                </h1>
+              ))}
+            </div>
           ))}
         </div>
         <div className="subheader-text-container">
-          {subheader.map(({ text, alternate }, i) => (
-            <h2
-              key={i}
-              className={`section-sub-header${
-                alternate ? " alternate-sub-header" : ""
-              }`}
-            >
-              {text}
-            </h2>
+          {subheader.map((textArray, i) => (
+            <div key={i} className="subheader-subcontainer">
+              {textArray.map(({ text, alternate }, i) => (
+                <h2
+                  key={i}
+                  className={`section-sub-header${
+                    alternate ? " alternate-text" : ""
+                  }`}
+                >
+                  {text}
+                </h2>
+              ))}
+            </div>
           ))}
         </div>
       </div>
@@ -58,11 +69,21 @@ export const SectionWrapper = ({
   subheader,
   children,
   alignRight,
-}: IsProps) => (
-  <div className={`section-wrapper${alignRight ? " align-right" : ""}`}>
-    <div className="section-container">
-      <SectionHeader {...{ header, subheader, alignRight }} />
-      <div className="body-container">{children}</div>
+}: IsProps) => {
+  const nodeRef = useRef<HTMLDivElement>(null)
+  const isVisible = useIsVisible(nodeRef, { once: true })
+
+  return (
+    <div
+      ref={nodeRef}
+      className={`section-wrapper ${isVisible ? "visible" : "hidden"}${
+        alignRight ? " align-right" : ""
+      }`}
+    >
+      <div className="section-container">
+        <SectionHeader {...{ header, subheader, alignRight }} />
+        <div className="body-container">{children}</div>
+      </div>
     </div>
-  </div>
-)
+  )
+}
