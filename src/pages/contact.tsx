@@ -14,7 +14,9 @@ const ContactPage = () => {
     return () => clearTimeout(loadingTimeout)
   }, [])
 
-  const onLoad = useCallback(() => setLoading(false), [])
+  const onLoad = useCallback(() => {
+    setLoading(false)
+  }, [])
 
   return (
     <div className="page-wrapper">

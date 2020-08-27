@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import heroImg from "./assets/hero.png"
 
 interface IsProps {
@@ -6,21 +6,27 @@ interface IsProps {
 }
 
 export const Hero = ({ onLoad }: IsProps) => {
-  const backgroundImg = new Image()
-  // backgroundImg.onload = () => onLoad()
-  backgroundImg.src = heroImg
+  const imgSrc = useRef<string | null>(null)
 
   useEffect(() => {
-    if (backgroundImg.complete) {
+    const backgroundImg = new Image()
+    // backgroundImg.current = new Image()
+    backgroundImg.onload = () => {
       onLoad()
     }
-  }, [backgroundImg.complete])
+    backgroundImg.src = heroImg
+    imgSrc.current = backgroundImg.src
+    // if (backgroundImg.complete) {
+    //   onLoad()
+    //   imgSrc.current = backgroundImg.src
+    // }
+  }, [])
 
   return (
     <div className="hero-wrapper">
       <div
         className="image-container"
-        style={{ backgroundImage: `url(${backgroundImg.src})` }}
+        style={{ backgroundImage: `url(${imgSrc.current})` }}
       >
         <div className="text-container">
           <h2 className="hero-text">{`We'd love to hear from you`}</h2>
