@@ -1,0 +1,39 @@
+.contact-section-wrapper {
+  @extend%page-section-wrapper;
+
+  .contact-section-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $desktopContentWidth;
+  }
+
+  .header-container {
+    padding: 10px 0;
+  }
+
+  .header-text {
+    @extend%section-header-text;
+    text-transform: uppercase;
+
+    span {
+      color: color(winfieldRed);
+      text-shadow: rgba(0, 0, 0, 1) 4px 4px 4px;
+    }
+  }
+
+  .body-text {
+    text-align: left;
+    font-size: fontSize(body);
+    line-height: fontSize(body) + 0.5;
+    margin: 10px 0;
+  }
+
+  .body-wrapper {
+    display: flex;
+    flex: 1;
+  }
+
+  @import "./components/contactForm/contactForm.scss";
+  @import "./components/contactInfo/contactInfo.scss";
+}

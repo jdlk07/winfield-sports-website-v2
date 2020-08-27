@@ -1,4 +1,5 @@
 import { HeroVideo } from "components/generalComponents/heroVideo/heroVideo"
+// import heroVideo from "components/vr/components/hero/assets/hero.mp4"
 import React from "react"
 import heroVideo from "./assets/hero.mp4"
 

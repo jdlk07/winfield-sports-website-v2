@@ -109,8 +109,8 @@
 
   .country-header-text {
     font-family: fontFamily(secondary);
-    font-size: fontSize(header) - 0.5rem;
-    font-weight: 600;
+    font-size: fontSize(header) - 0.5;
+    font-weight: 500;
     text-shadow: rgba(0, 0, 0, 0.9) 4px 4px 5px;
     letter-spacing: 2px;
   }
@@ -126,12 +126,13 @@
 
   .country-subheader-text {
     color: color(winfieldRed);
+    font-family: fontFamily(secondary);
     font-size: fontSize(small);
     margin: 8px 0;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     // text-shadow: none;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   .section-container {
@@ -142,7 +143,7 @@
   }
 
   .contact-message-text {
-    font-size: fontSize(small);
+    font-size: fontSize(extraSmall);
     white-space: pre-wrap;
     text-transform: uppercase;
     font-weight: 300;
@@ -239,6 +240,7 @@
   }
 
   .footer-copyright {
+    font-family: fontFamily(secondary);
     font-size: fontSize(small);
     color: color(font1);
     font-weight: 300;

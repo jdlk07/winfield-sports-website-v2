@@ -1,0 +1,125 @@
+.hero-wrapper {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+
+  .image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: bottom center;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+  }
+
+  .text-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: fontFamily(secondary);
+    font-size: fontSize(jumbo);
+    color: color(font1);
+    font-weight: 400;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 5px 5px 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  .hero-subtext {
+    font-family: fontFamily(primary);
+    font-size: fontSize(body);
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    color: color(font1);
+    opacity: 0.9;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    line-height: fontSize(body) + 0.5;
+  }
+
+  // $carouselItemHeight: 75px;
+
+  // .text-list-container {
+  //   overflow: hidden;
+  //   position: relative;
+  //   // float: right;
+  //   height: 85px;
+  //   // padding-top: 10px;
+  //   margin-bottom: -4px;
+  //   // background-color: aquamarine;
+  //   li {
+  //     // font-family: Serif;
+  //     font-family: fontFamily(secondary);
+  //     color: color(winfieldRed);
+  //     // font-weight: 700;
+  //     // padding: 0 10px;
+  //     height: $carouselItemHeight;
+  //     margin-bottom: $carouselItemHeight;
+  //     display: block;
+  //     text-align: left;
+  //     // background-color: blue;
+  //   }
+  // }
+
+  // ul {
+  //   animation: flip4 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
+  // @keyframes flip4 {
+  //   0% {
+  //     margin-top: -$carouselItemHeight * 8;
+  //   }
+  //   5% {
+  //     margin-top: -$carouselItemHeight * 6;
+  //   }
+  //   25% {
+  //     margin-top: -$carouselItemHeight * 6;
+  //   }
+  //   30% {
+  //     margin-top: -$carouselItemHeight * 4;
+  //   }
+  //   50% {
+  //     margin-top: -$carouselItemHeight * 4;
+  //   }
+  //   55% {
+  //     margin-top: -$carouselItemHeight * 2;
+  //   }
+  //   75% {
+  //     margin-top: -$carouselItemHeight * 2;
+  //   }
+  //   80% {
+  //     margin-top: 0px;
+  //   }
+  //   99.99% {
+  //     margin-top: 0px;
+  //   }
+  //   100% {
+  //     margin-top: -$carouselItemHeight * 6;
+  //   }
+  // }
+}

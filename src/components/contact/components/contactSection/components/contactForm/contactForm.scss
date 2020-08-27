@@ -1,0 +1,54 @@
+.contact-form-wrapper {
+  display: flex;
+  flex: 1;
+
+  form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // background-color: lightsalmon;
+  }
+
+  @import "./components/textInputs/textInputs.scss";
+
+  .submit-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+    button {
+      @extend%remove-button-styles;
+      font-family: fontFamily(secondary);
+      font-size: fontSize(body);
+      font-weight: 400;
+      letter-spacing: 0.3rem;
+      color: color(font1);
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 8px 20px;
+      box-shadow: rgb(0, 0, 0) 0px 4px 5px;
+      cursor: pointer;
+    }
+
+    .mail-to-link {
+      text-decoration: none;
+    }
+  }
+
+  // .form-input-container {
+  //   &.empty {
+  //     label {
+  //       transform: translateY(100%);
+  //       opacity: 0;
+  //     }
+  //   }
+  //   &.not-empty {
+  //     label {
+  //       transform: translateY(0%);
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+}

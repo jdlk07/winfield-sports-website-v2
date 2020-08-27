@@ -15,8 +15,9 @@ const transitionEnter = {
 
 const links = [
   { name: "HOME", to: "/" },
-  { name: "3D VR", to: "/vr" },
+  // { name: "3D VR", to: "/vr" },
   { name: "3D ON-FIELD", to: "/3d" },
+  // { name: "CONTACT", to: "/contact" },
 ]
 
 const _Navbar = () => {

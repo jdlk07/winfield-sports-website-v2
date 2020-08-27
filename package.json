@@ -43,7 +43,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "local": "gatsby develop -H 0.0.0.0",
     "fix": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p",
-    "deploy": "gatsby-plugin-s3 deploy"
+    "deploy": "gatsby build && gatsby-plugin-s3 deploy"
   },
   "repository": {
     "type": "git",

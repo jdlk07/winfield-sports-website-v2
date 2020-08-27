@@ -59,8 +59,8 @@ export const Features = () => {
           <div className="header-line" />
         </div>
         <div className="body-container">
-          {features.map(({ ...featureData }) => (
-            <Feature {...{ ...featureData }} />
+          {features.map(({ ...featureData }, i) => (
+            <Feature key={i} {...{ ...featureData }} />
           ))}
         </div>
       </div>

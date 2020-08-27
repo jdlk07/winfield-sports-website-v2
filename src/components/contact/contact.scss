@@ -1,0 +1,11 @@
+@import "styles/presets.scss";
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+
+  @import "./components/hero/hero.scss";
+  @import "./components/contactSection/contactSection.scss";
+}

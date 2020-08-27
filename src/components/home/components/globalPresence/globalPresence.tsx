@@ -38,7 +38,7 @@ const countires = ["Dubai", "India", "Sri Lanka", "Malaysia"]
 
 const _GlobalPresence = () => {
   const nodeRef = useRef<HTMLDivElement>(null)
-  const isVisible = useIsVisible(nodeRef)
+  const isVisible = useIsVisible(nodeRef, { once: true })
   return (
     <div ref={nodeRef} className="global-presence-wrapper">
       <BackgroundParallax backgroundImage={backgroundPolygon} />

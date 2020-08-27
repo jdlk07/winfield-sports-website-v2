@@ -15,7 +15,9 @@
 
   .navbar-container {
     width: 100%;
-    max-width: $desktopContentWidth;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: $desktopContentWidth + 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,6 +39,12 @@
 
   .link-container {
     padding: 0 10px;
+
+    a {
+      font-family: fontFamily(primary);
+      font-weight: 400;
+      // letter-spacing: 0.1rem;
+    }
 
     .link-button {
       text-decoration: none;
