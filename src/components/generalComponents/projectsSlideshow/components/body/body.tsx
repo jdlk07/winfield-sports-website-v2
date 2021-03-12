@@ -10,8 +10,6 @@ interface IsProps {
 }
 
 export const Body = ({ data, activeIndex }: IsProps) => {
-  const imageTimerRef = useRef<NodeJS.Timeout | null>(null)
-
   const didMount = useRef(false)
 
   const [currentProjectIndex, setCurrentProjectIndex] = useState(activeIndex)

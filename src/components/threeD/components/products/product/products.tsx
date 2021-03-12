@@ -21,14 +21,15 @@ export const Product = ({ header, image, details, features }: ProductData) => (
         <img src={image} alt={`${header} image`} className="product-image" />
       </div>
       <div className="body-container">
-        {details.map(({ title, body }) => (
+        {/**Consider deleting below once confirmed it will no longer be used. (13 Mar 2020) */}
+        {/* {details.map(({ title, body }) => (
           <div key={title} className="body-detail-container">
             <div className="body-title-container">
               <p className="body-title-text">{`${title}:`}</p>
             </div>
             <p className="body-detail-text">{body}</p>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
     <Features data={features} />
